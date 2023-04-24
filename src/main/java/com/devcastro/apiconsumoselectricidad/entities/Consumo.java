@@ -1,2 +1,4 @@
-package com.devcastro.apiconsumoselectricidad.entities;public class Consumo {
+package com.devcastro.apiconsumoselectricidad.entities;
+
+public class Consumo {
 }
