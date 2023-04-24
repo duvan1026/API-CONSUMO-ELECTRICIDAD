@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
+import java.util.SortedMap;
+import java.util.TreeMap;
 
 @Service
 public class ComsuptionServiceImpl implements IConsumptionService{
@@ -21,6 +23,17 @@ public class ComsuptionServiceImpl implements IConsumptionService{
 
     @Override
     public Map<String, Double> getConsumptionByDate(String meterDate) {
+
+        double maxiumConsumption = 0; // Consumo máximo por hora
+        double minimunConsumption; // Consumo mínimo por hora
+        double dailyConsumption = 0; // Consumo diario
+        String startWith = "00"; // Inicia con
+
+        SortedMap<String, Double> consumptionPerHour = new TreeMap<>(); // Data de salida ordenada
+        List<ElectricalConsumption> consumptionPerDay = consumptionRepository.getConsumptionbyDate(meterDate);
+
+
+
         return null;
     }
 
