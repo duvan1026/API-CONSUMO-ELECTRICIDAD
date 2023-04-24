@@ -1,12 +1,14 @@
 package com.devcastro.apiconsumoselectricidad.entities;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
 
 @Entity
 @Table(name = "consumos")
+@Data // Genera(Getters,Setters and ToString)
 public class ElectricalConsumption implements Serializable {
 
 
